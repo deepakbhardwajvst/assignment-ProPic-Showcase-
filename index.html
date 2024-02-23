@@ -4,6 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Gallery</title>
+    <style>
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      #image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .image-container {
+        text-align: center;
+        margin: 10px;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      img {
+        max-width: 220px;
+        max-height: auto;
+        margin-top: 5px;
+      }
+
+      p {
+        margin: 5px 0;
+      }
+    </style>
   </head>
   <body>
     <div id="image-gallery"></div>
