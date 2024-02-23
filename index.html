@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+  </head>
+  <body>
+    <div id="image-gallery"></div>
+
+    <script>
+      // JSON data with image URLs, names, and work information
+      const imageData = [
+        { name: "Dr. Wael Alomari", work: "Dental Care", image: "./img.png" },
+        {
+          name: "Dr. Wael Alomari",
+          work: "Pediatric Dental Consultant",
+          image: "./img2.png",
+        },
+        { name: "Dr. Wael Alomari", work: "Orthodantist", image: "./img3.png" },
+        { name: "Dr. Wael Alomari", work: "Dental Care", image: "./img4.png" },
+        {
+          name: "Dr. Wael Alomari",
+          work: "Pediatric Dental Consultant",
+          image: "./img2.png",
+        },
+        { name: "Dr. Wael Alomari", work: "Orthodantist", image: "./img3.png" },
+        { name: "Dr. Wael Alomari", work: "Dental Care", image: "./img.png" },
+        {
+          name: "Dr. Wael Alomari",
+          work: "Pediatric Dental Consultant",
+          image: "./img2.png",
+        },
+        { name: "Dr. Wael Alomari", work: "Orthodantist", image: "./img3.png" },
+        { name: "Dr. Wael Alomari", work: "Orthodantist", image: "./img4.png" },
+        { name: "Dr. Wael Alomari", work: "Dental Care", image: "./img.png" },
+        {
+          name: "Dr. Wael Alomari",
+          work: "Pediatric Dental Consultant",
+          image: "./img2.png",
+        },
+        { name: "Dr. Wael Alomari", work: "Dental Care", image: "./img4.png" },
+        {
+          name: "Dr. Wael Alomari",
+          work: "Pediatric Dental Consultant",
+          image: "./img2.png",
+        },
+        { name: "Dr. Wael Alomari", work: "Orthodantist", image: "./img3.png" },
+        { name: "Dr. Wael Alomari", work: "Dental Care", image: "./img.png" },
+        {
+          name: "Dr. Wael Alomari",
+          work: "Pediatric Dental Consultant",
+          image: "./img4.png",
+        },
+        { name: "Dr. Wael Alomari", work: "Dental Care", image: "./img.png" },
+        {
+          name: "Dr. Wael Alomari",
+          work: "Pediatric Dental Consultant",
+          image: "./img2.png",
+        },
+        { name: "Dr. Wael Alomari", work: "Orthodantist", image: "./img3.png" },
+        { name: "Dr. Wael Alomari", work: "Dental Care", image: "./img.png" },
+        {
+          name: "Dr. Wael Alomari",
+          work: "Pediatric Dental Consultant",
+          image: "./img2.png",
+        },
+        { name: "Dr. Wael Alomari", work: "Dental Care", image: "./img.png" },
+        {
+          name: "Dr. Wael Alomari",
+          work: "Pediatric Dental Consultant",
+          image: "./img2.png",
+        },
+        {
+          name: "Dr. Wael Alomari",
+          work: "Pediatric Dental Consultant",
+          image: "./img2.png",
+        },
+        { name: "Dr. Wael Alomari", work: "Dental Care", image: "./img.png" },
+        {
+          name: "Dr. Wael Alomari",
+          work: "Pediatric Dental Consultant",
+          image: "./img2.png",
+        },
+        { name: "Dr. Wael Alomari", work: "Dental Care", image: "./img.png" },
+        {
+          name: "Dr. Wael Alomari",
+          work: "Pediatric Dental Consultant",
+          image: "./img4.png",
+        },
+        {
+          name: "Dr. Wael Alomari",
+          work: "Pediatric Dental Consultant",
+          image: "./img2.png",
+        },
+      ];
+
+      function loadImages() {
+        const gallery = document.getElementById("image-gallery");
+
+        imageData.forEach((item) => {
+          const container = document.createElement("div");
+          container.className = "image-container";
+
+          const img = document.createElement("img");
+          img.src = item.image;
+
+          const name = document.createElement("p");
+          name.textContent = item.name;
+
+          const work = document.createElement("p");
+          work.textContent = item.work;
+
+          container.appendChild(img);
+          container.appendChild(name);
+          container.appendChild(work);
+
+          // Setting background color based on work value
+          if (item.work === "Pediatric Dental Consultant") {
+            container.style.backgroundColor = "#68b4ac";
+          } else {
+            container.style.backgroundColor = "#ccc"; // Default background color
+          }
+
+          gallery.appendChild(container);
+        });
+      }
+
+      loadImages();
+    </script>
+  </body>
+</html>
